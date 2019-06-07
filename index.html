@@ -1,10 +1,221 @@
 <!doctype html>
+<!--
+
+
+                     /\
+                    /  \
+                   / /\ \
+                  / /  \ \ 
+                 / /    \ \
+                / /      \ \
+               / /        \ \
+              / /          \ \
+             / /            \ \
+            / / O            \ \
+            | |    P         | |
+            | |       E      | |
+            | |  H       N   | |
+            | |    O        -| |
+            | |      U       | |
+            | | .      S     | |
+            | |  O       E   | |
+            | |   R          | |
+            | |    G         | |
+            | |______________| |
+            |__________________|
+
+
+
+-->
+
+
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Open House</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  Slick  -->
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<!--  Default Slick Theme styling  -->
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+<script>
+	var editing = false;
+	
+    if(editing){
+      window.location = "/coming-soon.html";
+    }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 
 <body>
+
+<div class="nav">
+	<a class="nav_logo nav_logo_text" href="#splash"></a>
+	
+	
+	<div class="nav_menu nav_menu_shown">
+		<div class="nav_menu_items">
+			<a href="#library">Library</a>
+			<a href="#about">About</a>
+			<a href="#resources">Resources</a>
+<!--			https://stackoverflow.com/questions/24739126/scroll-to-a-specific-element-using-html-->
+		</div>
+		
+	</div>
+</div>
+
+
+<!--
+<div id="splash">
+	<img src="images/splash_detail1.JPG">
+</div>
+-->
+
+
+<div id="library">
+	
+	<div class="mod_card">
+		<img class="mod_img" src="images/Module-A/MOD-A-OVERVIEW.JPG">
+		<div class="mod_desc">
+			<div class="mod_download">
+				<p class="mod_download_txt">Download</p>
+				<a href="#about" class="mod_download_button">
+					<img class="mod_download_img" src="icons/down_arrow.jpg">
+				</a>
+			</div>		
+			<p class="mod_desc_title">Module 1</p>			
+			<p class="mod_desc_about">Core module. Built by Nicky and Austin. This Core Module allows for endless variety.  How fun is that?? Blah Blah Blah....</p>
+		</div>	
+	</div>
+	
+	<div class="mod_card">
+		<img class="mod_img" src="images/Module-B/MOD-B-OVERVIEW.JPG">
+		<div class="mod_desc">
+			<div class="mod_download">
+				<p class="mod_download_txt">Download</p>
+				<a href="#about" class="mod_download_button">
+					<img class="mod_download_img" src="icons/down_arrow.jpg">
+				</a>
+			</div>		
+			<p class="mod_desc_title">Module 2</p>			
+			<p class="mod_desc_about">Secondary module.  Not bad, am I right?  Click here for more info... if you dare....</p>
+		</div>
+	</div>
+	
+	<div class="mod_card">
+		<img class="mod_img" src="images/Module-C/MOD-C-OVERVIEW.JPG">
+		<div class="mod_desc">
+			<div class="mod_download">
+				<p class="mod_download_txt">Download</p>
+				<a href="#about" class="mod_download_button">
+					<img class="mod_download_img" src="icons/down_arrow.jpg">
+				</a>
+			</div>		
+			<p class="mod_desc_title">Module 3</p>			
+			<p class="mod_desc_about">This one is a chair. NEAT!</p>
+		</div>
+	</div>
+	
+	<div class="mod_card">
+		<img class="mod_img" src="images/Module-D/MOD-D-OVERVIEW.JPG">
+		<div class="mod_desc">
+			<div class="mod_download">
+				<p class="mod_download_txt">Download</p>
+				<a href="#about" class="mod_download_button">
+					<img class="mod_download_img" src="icons/down_arrow.jpg">
+				</a>
+			</div>		
+			<p class="mod_desc_title">Module 4</p>			
+			<p class="mod_desc_about">Another Chair!  Pretty cool!!</p>
+		</div>
+	</div>
+	
+</div>
+
+<!--
+<div id="about">
+	<p><b>Open House</b> is a collaborative platform for open-source, modular architecture</p>
+</div>
+-->
+
+<!--
+<div id="resources">
+	<p>Resources</p>
+</div>
+-->
+
+<!--
+<div id="footer">
+	<p>Built by the Open House team.</p>
+</div>
+-->
+
+
+<script>
+	$(".mod_download_button").hover(function() {
+
+		console.log("hello");
+		$(this).siblings(".mod_download_txt").addClass("mod_down_txt_show");
+	}, function() {
+		$(this).siblings(".mod_download_txt").removeClass("mod_down_txt_show");
+	});
+</script>
+
+<!--  Slick javascript  -->
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('#library').slick({
+ 		
+      });
+    });
+</script>
+
+<script>
+	
+	$(document).scroll(function () {
+		// at top?
+		if ($(window).scrollTop() <= 50) {
+			$('.nav_menu').removeClass('nav_menu_hidden');
+			$('.nav_menu').addClass('nav_menu_shown');
+			$('.nav_logo').removeClass('nav_logo_symbol');
+			$('.nav_logo').addClass('nav_logo_text');
+		} else if ($(window).scrollTop() >= 50) {
+			$('.nav_menu').removeClass('nav_menu_shown');
+			$('.nav_menu').addClass('nav_menu_hidden');
+			$('.nav_logo').removeClass('nav_logo_text');
+			$('.nav_logo').addClass('nav_logo_symbol');
+		};
+
+		// Mouse enters Nav:
+		$('.nav_menu, .nav_logo').mouseenter(function () {
+			if ($(window).scrollTop() >= 50) {
+				$('.nav_menu').removeClass('nav_menu_hidden');
+				$('.nav_menu').addClass('nav_menu_shown');
+				$('.nav_logo').removeClass('nav_logo_symbol');
+				$('.nav_logo').addClass('nav_logo_text');
+			}
+		});
+		
+		$('.nav_menu, .nav_logo').mouseleave(function () {
+			if ($(window).scrollTop() >= 50) {
+				$('.nav_menu').removeClass('nav_menu_shown');
+				$('.nav_menu').addClass('nav_menu_hidden');
+				$('.nav_logo').removeClass('nav_logo_text');
+				$('.nav_logo').addClass('nav_logo_symbol');
+			}
+		});
+		
+	})
+</script>
+
 </body>
 </html>
