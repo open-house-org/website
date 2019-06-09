@@ -37,10 +37,6 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!--  Slick  -->
-<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<!--  Default Slick Theme styling  -->
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
 <script>
 	var editing = false;
@@ -72,16 +68,17 @@
 </div>
 
 
-<!--
 <div id="splash">
 	<img src="images/splash_detail1.JPG">
 </div>
--->
 
-
+<!--  GRID TUTORIAL: https://getflywheel.com/layout/card-layout-css-grid-layout-how-to/  -->
+<!--  IN ACTION: https://codepen.io/abbeyjfitzgerald/pen/QaeoYj  -->
 <div id="library">
-	
-	<div class="mod_card">
+
+	<div class="mod_container">
+			
+		<div class="mod_card">
 		<img class="mod_img" src="images/Module-A/MOD-A-OVERVIEW.JPG">
 		<div class="mod_desc">
 			<div class="mod_download">
@@ -93,69 +90,57 @@
 			<p class="mod_desc_title">Module 1</p>			
 			<p class="mod_desc_about">Core module. Built by Nicky and Austin. This Core Module allows for endless variety.  How fun is that?? Blah Blah Blah....</p>
 		</div>	
-	</div>
-	
-	<div class="mod_card">
-		<img class="mod_img" src="images/Module-B/MOD-B-OVERVIEW.JPG">
-		<div class="mod_desc">
-			<div class="mod_download">
-				<p class="mod_download_txt">Download</p>
-				<a href="#about" class="mod_download_button">
-					<img class="mod_download_img" src="icons/down_arrow.jpg">
-				</a>
-			</div>		
-			<p class="mod_desc_title">Module 2</p>			
-			<p class="mod_desc_about">Secondary module.  Not bad, am I right?  Click here for more info... if you dare....</p>
 		</div>
-	</div>
-	
-	<div class="mod_card">
-		<img class="mod_img" src="images/Module-C/MOD-C-OVERVIEW.JPG">
-		<div class="mod_desc">
-			<div class="mod_download">
-				<p class="mod_download_txt">Download</p>
-				<a href="#about" class="mod_download_button">
-					<img class="mod_download_img" src="icons/down_arrow.jpg">
-				</a>
-			</div>		
-			<p class="mod_desc_title">Module 3</p>			
-			<p class="mod_desc_about">This one is a chair. NEAT!</p>
+
+		<div class="mod_card">
+			<img class="mod_img" src="images/Module-B/MOD-B-OVERVIEW.JPG">
+			<div class="mod_desc">
+				<div class="mod_download">
+					<p class="mod_download_txt">Download</p>
+					<a href="#about" class="mod_download_button">
+						<img class="mod_download_img" src="icons/down_arrow.jpg">
+					</a>
+				</div>		
+				<p class="mod_desc_title">Module 2</p>			
+				<p class="mod_desc_about">Secondary module.  Not bad, am I right?  Click here for more info... if you dare....</p>
+			</div>
 		</div>
-	</div>
-	
-	<div class="mod_card">
-		<img class="mod_img" src="images/Module-D/MOD-D-OVERVIEW.JPG">
-		<div class="mod_desc">
-			<div class="mod_download">
-				<p class="mod_download_txt">Download</p>
-				<a href="#about" class="mod_download_button">
-					<img class="mod_download_img" src="icons/down_arrow.jpg">
-				</a>
-			</div>		
-			<p class="mod_desc_title">Module 4</p>			
-			<p class="mod_desc_about">Another Chair!  Pretty cool!!</p>
+
+		<div class="mod_card">
+			<img class="mod_img" src="images/Module-C/MOD-C-OVERVIEW.JPG">
+			<div class="mod_desc">
+				<div class="mod_download">
+					<p class="mod_download_txt">Download</p>
+					<a href="#about" class="mod_download_button">
+						<img class="mod_download_img" src="icons/down_arrow.jpg">
+					</a>
+				</div>		
+				<p class="mod_desc_title">Module 3</p>			
+				<p class="mod_desc_about">This one is a chair. NEAT!</p>
+			</div>
 		</div>
+
+		<div class="mod_card add_mod">
+			<img src="icons/plus.png">
+			<p>Contribute</p>
+		</div>
+		
 	</div>
+
 	
 </div>
 
-<!--
 <div id="about">
 	<p><b>Open House</b> is a collaborative platform for open-source, modular architecture</p>
 </div>
--->
 
-<!--
 <div id="resources">
 	<p>Resources</p>
 </div>
--->
 
-<!--
 <div id="footer">
 	<p>Built by the Open House team.</p>
 </div>
--->
 
 
 <script>
@@ -168,16 +153,6 @@
 	});
 </script>
 
-<!--  Slick javascript  -->
-<script type="text/javascript" src="slick/slick.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-      $('#library').slick({
- 		
-      });
-    });
-</script>
 
 <script>
 	

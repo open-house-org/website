@@ -7,6 +7,7 @@ body {
 
 p {
 	color: black;
+	font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -91,7 +92,7 @@ a {
 #splash {
 	position: relative;
 	background-color: white;
-	height: 100%;
+	height: 750px;
 	left: 0px;
 	width: 100%;
 	margin: 0px;
@@ -101,11 +102,12 @@ a {
 #library {
 	position: relative;
 	background-color: white;
-	height: 600px;
+	height: auto;
 	left: 0px;
 	width: 100%;
 	margin: 0px;
-	padding-top: 50px;
+	padding-top: 100px;
+	padding-bottom: 100px
 	
 /*	Make the height of the window (or a percentage)*/
 }
@@ -113,7 +115,7 @@ a {
 #about {
 	position: relative;
 	background-color: rgba(200,200,200,1.00);
-	height: 400px;
+	height: 600px;
 	left: 0px;
 	width: 100%;
 	margin: 0px;
@@ -123,7 +125,7 @@ a {
 #resources {
 	position: relative;
 	background-color: rgba(108,108,108,1.00);
-	height: 400px;
+	height: 600px;
 	left: 0px;
 	width: 100%;
 	margin: 0px;
@@ -133,7 +135,7 @@ a {
 #footer {
 	position: relative;
 	background-color: black;
-	height: 200px;
+	height: 600px;
 	left: 0px;
 	width: 100%;
 	margin: 0px;
@@ -144,6 +146,13 @@ a {
 	position: relative;
 	width: 100%;
 	height: auto;
+}
+
+.mod_container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: auto;
+	grid-gap: 1rem;
 }
 
 .mod_card {
@@ -159,12 +168,47 @@ a {
 	margin-right: auto;
 	
 	
-	width: 200px;
+	width: 250px;
 	height: auto;
 }
 
 .mod_card:hover {
   	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.add_mod {
+	background-color: black;
+	opacity: .5;
+	
+	transition: opacity .5s;
+}
+
+.add_mod:hover {
+	opacity: 1;
+}
+
+.add_mod img {
+	position: relative;
+	height: 65px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	top: 40%;
+}
+
+.add_mod p {
+	color: white;
+	position: relative;
+	display: block;
+	text-align: center;
+	top: 40%;
+	
+	opacity: 0;
+	transition: opacity .5s;
+}
+
+.add_mod:hover p {
+	opacity: 1;
 }
 
 .mod_img {
